@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PokéLanding — Generaciones, Regiones & Items</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img id="nav-icon-home" src="" alt="squirtle" class="nav-icon me-2">
+        <span class="brand">PokéLanding</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item mx-1">
+            <a class="nav-link d-flex align-items-center" href="#inicio">
+              <img id="nav-icon-1" class="nav-icon-sm me-2" src="" alt="inicio">Inicio
+            </a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link d-flex align-items-center" href="#generaciones">
+              <img id="nav-icon-2" class="nav-icon-sm me-2" src="" alt="generaciones">Generaciones
+            </a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link d-flex align-items-center" href="#regiones">
+              <img id="nav-icon-3" class="nav-icon-sm me-2" src="" alt="regiones">Regiones
+            </a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link d-flex align-items-center" href="#items">
+              <img id="nav-icon-4" class="nav-icon-sm me-2" src="" alt="items">Items
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (imagen de fondo asignada por JS - Pikachu) -->
+  <section id="inicio" class="hero d-flex align-items-center justify-content-center text-center text-white">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner container">
+      <h1 class="hero-title">¡Atrápalos ya!</h1>
+      <p class="hero-sub">Explora las primeras generaciones, regiones e items — todo desde PokéAPI</p>
+      <a class="gen btn btn-primary btn-lg " href="#generaciones">Ver Generaciones</a>
+    </div>
+  </section>
+
+  <!-- GENERACIONES my-5-->
+  <main class="container-inner" >
+    <section id="generaciones" class="mt-5 pt-5">
+      <h2 class="section-title text-center m-5">Generaciones I - III (8 Pokémon cada una)</h2>
+
+      <div id="carouselWrapper" class="position-relative">
+        <div id="carouselGeneraciones" class="carousel slide" data-bs-interval="false" data-bs-touch="true" data-bs-pause="false">
+          <div class="carousel-inner" id="carouselContent"></div>
+        </div>
+
+        <!-- Controles pequeños, centrados verticalmente a los costados -->
+        <button class="carousel-control-prev small-arrow" type="button" data-bs-target="#carouselGeneraciones" data-bs-slide="prev" aria-label="Anterior">
+          <span>&lt;</span>
+        </button>
+        <button class="carousel-control-next small-arrow" type="button" data-bs-target="#carouselGeneraciones" data-bs-slide="next" aria-label="Siguiente">
+          <span>&gt;</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- REGIONES mb-5-->
+    <section id="regiones" class="mt-5 pt-5">
+      <h2 class="section-title text-center m-5">Regiones (Kanto, Johto, Hoenn)</h2>
+      <div class="row m-1" id="regionsContainer"></div>
+    </section>
+
+    <!-- ITEMS -->
+    <section id="items" class="mt-5 pt-5">
+      <h2 class="section-title text-center m-5">Items clásicos</h2>
+      <div class="row m-1" id="itemsContainer"></div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 bg-dark text-white">
+    <small>&copy; 2025 — PokéLanding</small>
+  </footer>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script -->
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
+
+
